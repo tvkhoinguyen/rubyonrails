@@ -1,0 +1,15 @@
+<h1>Hello world. This is first RoR app</h1>
+<h5>Post#index</h5>
+<p>Find me in app/views/post/index.html.erb</p>
+
+<!-- biến @posts từ khóa là @ -->
+<% @posts.each do |post| %>
+
+	<h3><%= post.id %></h3>
+	<h3><%= link_to post.title, post %></h3>
+	<h3><%= link_to post.id, post %></h3>
+	<p><%= post.content %></p>
+	<hr/>
+<% end %>
+
+<p><%= link_to "Add a new post", new_post_path %></p>
