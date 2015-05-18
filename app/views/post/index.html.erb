@@ -5,9 +5,8 @@
 <!-- biến @posts từ khóa là @ -->
 <% @posts.each do |post| %>
 
-	<h3><%= post.id %></h3>
-	<p><%= link_to post.title, post %></p>
 	<h3><%= link_to post.id, post %></h3>
+	<p><%= link_to post.title, post %></p>
 	<p><%= post.content %></p>
 	<p>
 		<%= link_to "Edit", edit_post_path(post) %> | 
